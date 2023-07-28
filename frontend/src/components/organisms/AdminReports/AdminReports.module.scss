@@ -1,0 +1,96 @@
+.reports {
+  padding-left: 2rem;
+
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+  }
+
+  table {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      color: $darker2;
+    }
+
+    tr {
+      padding: auto;
+      border: $border-width-1 solid $bg-dark;
+    }
+
+    td {
+      padding-left: 1rem;
+      border: $border-width-1 solid $bg-dark;
+      @media screen and (max-width: $screen-sm) {
+        padding-left: 0.5rem;
+      }
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      @media screen and (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $darker2;
+    }
+  }
+
+  table &__table {
+    tr {
+      border: none;
+    }
+
+    td {
+      border: none;
+    }
+  }
+
+  &__name:hover {
+    color: $primary;
+  }
+
+  &__delete {
+    color: $error;
+    text-align: end;
+    padding-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      color: opacify($color: rgb(122, 32, 32), $amount: 0.8);
+    }
+  }
+
+  &__text {
+    width: 30%;
+  }
+
+  &__alert {
+    font-size: $body-s;
+    text-align: end;
+    padding-right: 0.5rem;
+
+    &--button {
+      color: $error;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darker2;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

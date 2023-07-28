@@ -1,0 +1,60 @@
+.admin {
+  display: flex;
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column;
+  }
+
+  &__sidebar {
+    width: 20%;
+
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @media screen and (max-width: $screen-md) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      li {
+        border-bottom: $border-width-1 solid $bg-dark;
+
+        @media screen and (max-width: $screen-md) {
+          border: none;
+          width: 33%;
+          text-align: center;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: $darker2;
+          background-color: $bg-light;
+        }
+      }
+    }
+  }
+
+  &__active {
+    background-color: $bg-light;
+    color: $primary;
+    font-weight: $weight-bold;
+  }
+
+  &__main {
+    width: 80%;
+
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}

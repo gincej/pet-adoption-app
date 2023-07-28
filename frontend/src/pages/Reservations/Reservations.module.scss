@@ -1,0 +1,107 @@
+.reservations {
+  &__heading {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+
+    svg {
+      fill: $primary;
+    }
+
+    svg:hover {
+      cursor: pointer;
+      fill: $darker2;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    padding: 2rem;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  &__left {
+    border-right: $border-width-1 solid $bg-dark;
+    height: 100vh;
+
+    @media screen and (max-width: $screen-lg) {
+      border: none;
+      height: max-content;
+    }
+  }
+
+  &__title {
+    color: $darker2;
+    margin-bottom: 2rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    tr {
+      padding: auto;
+      border: $border-width-1 solid $bg-dark;
+    }
+
+    td {
+      border: $border-width-1 solid $bg-dark;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      @media screen and (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $darker2;
+    }
+  }
+
+  &__petname {
+    max-width: 15rem;
+    text-align: left;
+  }
+
+  &__contacts {
+    max-width: 15rem;
+    word-wrap: break-word;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darker2;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

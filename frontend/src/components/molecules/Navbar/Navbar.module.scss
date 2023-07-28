@@ -1,0 +1,27 @@
+.navbar {
+  gap: 2rem;
+  position: relative;
+  color: $primary;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: $family-body;
+  font-weight: $weight-semibold;
+  height: 100%;
+  width: 100%;
+
+  & a {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  & span:hover {
+    cursor: pointer;
+  }
+
+  &__divider {
+    border-left: $border-width-2 solid $bg-dark;
+    height: 50%;
+    margin-right: 2rem;
+  }
+}

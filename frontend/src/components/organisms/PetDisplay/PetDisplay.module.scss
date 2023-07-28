@@ -1,0 +1,50 @@
+.display {
+  margin-top: 3rem;
+
+  &__main {
+    display: flex;
+    justify-content: start;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  &__pets {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $screen-md) {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-size: $body-xl;
+    color: $darker1;
+    align-self: flex-start;
+
+    @media screen and (max-width: $screen-md) {
+      align-self: center;
+    }
+  }
+}

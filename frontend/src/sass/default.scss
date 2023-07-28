@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  max-width: $max-screen-width;
+  min-width: $min-screen-width;
+  color: $text-dark;
+  font-family: $family-body;
+  font-size: $body-m;
+  margin: 0 auto;
+  padding: 0;
+
+  @media screen and (max-width: $screen-sm) {
+    font-size: $body-s;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+select {
+  font-size: $body-m;
+  font-family: $family-body;
+}

@@ -1,0 +1,34 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__picture {
+    height: 70rem;
+    display: flex;
+
+    @media screen and (max-width: $screen-sm) {
+      height: 50rem;
+    }
+  }
+
+  img {
+    max-width: 40rem;
+    max-height: 70rem;
+    object-fit: contain;
+
+    @media screen and (max-width: $screen-sm) {
+      max-width: 20rem;
+      max-height: 50rem;
+    }
+  }
+
+  svg {
+    fill: $primary;
+
+    &:hover {
+      cursor: pointer;
+      fill: $darker2;
+    }
+  }
+}

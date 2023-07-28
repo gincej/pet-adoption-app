@@ -1,0 +1,53 @@
+.reviewform {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: $border-radius-default;
+  border: $bg-dark solid $border-width-1;
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  textarea {
+    width: 100%;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 10rem;
+    margin-bottom: 1rem;
+    font-size: $body-m;
+    font-weight: $weight-medium;
+    color: $primary;
+    font-family: $family-body;
+    border-top: solid $border-width-1 $bg-dark;
+
+    &::placeholder {
+      color: $text-light;
+      font-weight: $weight-regular;
+      font-size: $body-s;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: $primary;
+    }
+  }
+
+  & svg:hover {
+    cursor: pointer;
+  }
+
+  &__error {
+    color: $error;
+  }
+}

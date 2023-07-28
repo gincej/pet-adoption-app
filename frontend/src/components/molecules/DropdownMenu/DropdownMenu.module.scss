@@ -1,0 +1,44 @@
+.dropdown {
+  position: absolute;
+  width: 20rem;
+  top: 70%;
+  right: 0;
+  animation: appear 0.3s ease-in-out;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0 0 $border-radius-button $border-radius-button;
+
+  &__list {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: right;
+    list-style: none;
+
+    li,
+    span,
+    a {
+      padding: 1rem;
+      color: $text-reg;
+
+      &:hover {
+        background-color: $bg-light;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

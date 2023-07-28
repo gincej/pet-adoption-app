@@ -1,0 +1,78 @@
+.users {
+  padding-left: 2rem;
+
+  @media screen and (max-width: $screen-sm) {
+    padding-left: 0;
+  }
+
+  table {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      color: $darker2;
+    }
+
+    tr {
+      padding: auto;
+      border: $border-width-1 solid $bg-dark;
+    }
+
+    td {
+      padding-left: 1rem;
+      border: $border-width-1 solid $bg-dark;
+    }
+
+    a {
+      text-decoration: none;
+      color: $darker2;
+    }
+  }
+
+  &__name:hover {
+    color: $primary;
+  }
+
+  table &__actions {
+    margin-top: 0;
+    tr {
+      border: none;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: $border-width-1 solid $bg-light;
+    }
+
+    td {
+      border: none;
+    }
+  }
+
+  &__actions {
+    font-size: $body-s;
+    text-align: end;
+    padding-right: 1rem;
+  }
+
+  &__delete,
+  &__alert--button {
+    color: $error;
+
+    &:hover {
+      cursor: pointer;
+      color: opacify($color: rgb(122, 32, 32), $amount: 0.8);
+    }
+  }
+
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darker2;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

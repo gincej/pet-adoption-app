@@ -1,0 +1,193 @@
+.pet {
+  height: 35rem;
+  display: flex;
+  width: 24rem;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: visible;
+  border-radius: $border-radius-default;
+  box-shadow: 0 0 10px $text-light;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &__picture {
+    height: 20rem;
+    border: $border-width-1 solid $text-reg;
+    border-radius: $border-radius-default $border-radius-default 0 0;
+
+    & img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 1.7rem 1.7rem 0 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      position: absolute;
+      margin: 1rem;
+      top: 0;
+      left: 0;
+      color: $white;
+      font-weight: $weight-semibold;
+      background-color: $error;
+      border-radius: $border-radius-default;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+
+  &__info {
+    padding: 1rem;
+    display: flex;
+    font-size: $body-s;
+    font-weight: $weight-regular;
+    flex-direction: column;
+    height: 45%;
+    background-color: $darker2;
+    justify-self: end;
+    border-radius: 0 0 $border-radius-default $border-radius-default;
+    color: $white;
+
+    &--reserved {
+      filter: grayscale(0.9);
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & h3 {
+      font-weight: $weight-medium;
+      font-size: $body-reg;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & svg {
+      fill: rgb(247, 247, 83);
+    }
+  }
+
+  &__traits {
+    display: flex;
+    margin-bottom: 0.5rem;
+
+    p {
+      max-width: 32%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__userlocation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__location,
+  &__user {
+    display: flex;
+    gap: 0.5rem;
+
+    & p {
+      align-self: end;
+    }
+
+    & a {
+      color: $neon;
+      text-decoration: none;
+      align-self: end;
+    }
+  }
+
+  &__createdAt {
+    margin-top: 0.5rem;
+    color: $bg-dark;
+    align-self: center;
+  }
+
+  &__favorite {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    right: 1rem;
+    background-color: $bg-light;
+    opacity: 80%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    & div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & p {
+        position: absolute;
+        color: $darker2;
+        font-size: $body-s;
+        font-weight: $weight-semibold;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 100%;
+      background-color: $darker2;
+
+      & p {
+        color: $white;
+      }
+
+      & svg {
+        fill: $neon;
+      }
+    }
+  }
+
+  &__useractions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__edit,
+  &__delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-light;
+    opacity: 80%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    & a {
+      height: 4rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 100%;
+    }
+  }
+}

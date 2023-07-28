@@ -1,0 +1,37 @@
+.commentform {
+  margin-top: 2rem;
+  width: 100%;
+
+  textarea {
+    width: 100%;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 10rem;
+    font-size: $body-m;
+    font-weight: $weight-medium;
+    color: $primary;
+    font-family: $family-body;
+    border: solid $border-width-1 $bg-dark;
+    border-radius: $border-radius-button;
+
+    &::placeholder {
+      color: $text-light;
+      font-weight: $weight-regular;
+      font-size: $body-s;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: $primary;
+    }
+  }
+
+  &__error {
+    color: $error;
+  }
+}

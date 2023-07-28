@@ -1,0 +1,54 @@
+.dropdown {
+  position: relative;
+  width: 40rem;
+
+  & input {
+    padding-left: 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 5rem;
+    font-size: $body-m;
+    font-weight: $weight-medium;
+    color: $primary;
+    font-family: $family-body;
+    border: solid $border-width-1 $bg-dark;
+    border-radius: $border-radius-button;
+    background-color: $white;
+
+    &::placeholder {
+      color: $text-light;
+      font-weight: $weight-regular;
+      font-size: $body-s;
+    }
+
+    &:-webkit-autofill,
+    :-webkit-autofill:hover,
+    :-webkit-autofill:focus,
+    :-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: $primary;
+    }
+  }
+
+  &__main {
+    position: absolute;
+    top: 100%;
+    background-color: red;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    z-index: 1000;
+    max-height: 300px;
+  }
+
+  &__suggestion {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+      background-color: $bg-light;
+    }
+  }
+}

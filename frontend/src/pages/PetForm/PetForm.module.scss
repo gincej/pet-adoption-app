@@ -1,0 +1,201 @@
+.petform {
+  display: flex;
+  justify-content: center;
+  color: $text-dark;
+  margin-bottom: 10rem;
+
+  &__container {
+    width: 60%;
+    margin-top: 5rem;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 80%;
+    }
+  }
+
+  &__title {
+    color: $darker2;
+    text-align: center;
+    font-size: $heading-xs;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    input,
+    select {
+      padding-left: 1rem;
+      border: none;
+      outline: none;
+      height: 5rem;
+      font-size: $body-m;
+      font-weight: $weight-medium;
+      color: $primary;
+      font-family: $family-body;
+      border: solid $border-width-1 $bg-dark;
+      border-radius: $border-radius-button;
+      background-color: $white;
+
+      &::placeholder {
+        color: $text-light;
+        font-weight: $weight-regular;
+        font-size: $body-s;
+      }
+
+      &:-webkit-autofill,
+      :-webkit-autofill:hover,
+      :-webkit-autofill:focus,
+      :-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset;
+        -webkit-text-fill-color: $primary;
+      }
+    }
+
+    select:disabled {
+      color: $text-light;
+    }
+
+    textarea {
+      @extend input;
+      height: 10rem;
+      resize: none;
+      padding-top: 1rem;
+    }
+
+    label {
+      font-size: $body-reg;
+      font-weight: $weight-semibold;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      text-decoration: underline;
+      color: $primary;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__traits {
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: $border-width-1 solid $bg-dark;
+      background-color: transparent;
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: $primary;
+    }
+
+    label {
+      font-weight: $weight-regular;
+      display: flex;
+      gap: 1rem;
+
+      @media screen and (max-width: $screen-md) {
+        font-size: $body-s;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+      text-align: center;
+      input {
+        width: 90%;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__error {
+    color: $error;
+    align-self: center;
+  }
+
+  &__age {
+    select {
+      width: 50%;
+    }
+  }
+
+  &__pictures {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      margin-bottom: 2rem;
+    }
+    & input {
+      display: none;
+    }
+  }
+
+  &__pictureList {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  &__pictureContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+label.petform__inputerror {
+  color: $error;
+}
+
+select.petform__inputerror,
+textarea.petform__inputerror,
+input.petform__inputerror {
+  border: $border-width-2 solid $error !important;
+}

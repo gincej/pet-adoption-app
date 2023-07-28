@@ -1,0 +1,129 @@
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  flex-wrap: wrap;
+
+  &__logo {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    color: $white;
+    font-weight: $weight-regular;
+    font-size: $body-s;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 3rem 6rem;
+    background-color: $white;
+    width: 60rem;
+    height: 70rem;
+    border-radius: $border-radius-default;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 90%;
+      padding: 2rem 3rem;
+      height: 65rem;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    font-size: $body-l;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: $body-m;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    a {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: $darker1;
+      font-weight: $weight-semibold;
+
+      &:hover {
+        color: $darker2;
+      }
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: flex-end;
+
+    @media screen and (max-width: $screen-sm) {
+      justify-content: center;
+    }
+  }
+
+  & label {
+    color: $error;
+    font-size: small;
+  }
+
+  & input {
+    padding-bottom: 1rem;
+    font-size: $body-l;
+    font-weight: $weight-medium;
+    color: $primary;
+    border: none;
+    outline: none;
+    border-bottom: $border-width-2 solid $darker2;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: $body-m;
+    }
+
+    &:-webkit-autofill,
+    :-webkit-autofill:hover,
+    :-webkit-autofill:focus,
+    :-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: $primary;
+    }
+  }
+
+  &__button {
+    text-align: center;
+  }
+
+  &__error {
+    padding-top: 1rem;
+    color: $error;
+  }
+
+  &__text {
+    text-align: center;
+    color: $lighter;
+
+    & a {
+      color: inherit;
+    }
+  }
+}
+
+.divider {
+  text-align: center;
+  border-left: $border-width-2 solid $bg-dark;
+  height: 50%;
+}

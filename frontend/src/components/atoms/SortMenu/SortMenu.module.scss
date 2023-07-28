@@ -1,0 +1,52 @@
+.sortmenu {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  gap: 2rem;
+
+  @media screen and (max-width: $screen-md) {
+    justify-content: start;
+    margin: 1rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & label {
+    color: $primary;
+    font-size: $body-reg;
+    font-weight: $weight-semibold;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: $body-m;
+    }
+  }
+
+  & select {
+    width: 30rem;
+    background-color: $bg-light;
+    padding: 1rem;
+    border-radius: $border-radius-button;
+    border: none;
+    outline: none;
+    appearance: none;
+    background-image: url("../../../../public/expand_more.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+
+    @media screen and (max-width: $screen-md) {
+      max-width: 60%;
+      font-size: $body-s;
+    }
+
+    &:focus {
+      appearance: none;
+      border: $bg-dark;
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

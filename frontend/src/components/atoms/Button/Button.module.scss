@@ -1,0 +1,67 @@
+.btn {
+  background-color: $darker2;
+  border-radius: $border-radius-button;
+  border: none;
+  color: $white;
+  font-weight: $weight-medium;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  width: max-content;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 0.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    font-size: $body-s;
+  }
+
+  &:hover {
+    background-color: $darker1;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: $border-width-4 dashed $neon;
+  }
+
+  &--lighter {
+    background-color: $primary;
+  }
+
+  &--outlined {
+    background-color: $white;
+    border: $border-width-2 solid $primary;
+    color: $darker1;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &--red {
+    background-color: $error;
+    color: $white;
+
+    &:hover {
+      background-color: $error;
+      opacity: 0.8;
+      color: $white;
+    }
+  }
+
+  &--disabled {
+    background-color: $bg-dark;
+    color: $text-light;
+    pointer-events: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $bg-dark;
+      color: $text-light;
+      pointer-events: none;
+    }
+  }
+}
